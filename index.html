@@ -1,1 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtTheJim Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --warm-bg: #fff5e1;
+      --accent: #e09f3e;
+      --highlight: #ffbc80;
+      --deep: #a6643e;
+      --text: #3e2c1c;
+      --profile-bg: #ffe4c4;
+      --card-bg: #fff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--warm-bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 1.5rem 0 1rem 0;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    .logo-img {
+      max-width:230px;
+      width:100%;
+      margin: 0 auto 0.7rem auto;
+      display:block;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .profile {
+      background: var(--profile-bg);
+      max-width: 700px;
+      margin: 2rem auto;
+      box-shadow: 0 2px 8px rgba(224, 159, 62, 0.08);
+      border-radius: 18px;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-right: 2rem;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+    }
+    .profile-content {
+      flex: 1;
+      min-width: 200px;
+    }
+    .profile-content h2 {
+      margin: 0 0 0.5rem 0;
+      font-family: 'Playfair Display', serif;
+      color: var(--deep);
+    }
+    .profile-content p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .gallery-section {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .gallery-section h2 {
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+    .gallery-medium {
+      margin-bottom: 1.5rem;
+    }
+    .gallery-medium h3 {
+      color: var(--deep);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .art-card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(224, 159, 62, 0.12);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .art-card:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 4px 16px rgba(224, 159, 62, 0.22);
+    }
+    .art-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.7rem;
+    }
+    .art-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--deep);
+      margin: 0.3rem 0;
+    }
+    .art-price {
+      color: var(--accent);
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+    }
+    .contact-section {
+      background: var(--accent);
+      color: #fff;
+      padding: 2rem 1rem 1.5rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .contact-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+    }
+    .social-links {
+      margin: 1rem 0;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0 0.7rem;
+      color: #fff;
+      font-size: 1.7rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: var(--highlight);
+    }
+    .contact-form {
+      margin-top: 1rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      margin-bottom: 0.8rem;
+      border-radius: 7px;
+      border: none;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background: var(--highlight);
+      color: var(--deep);
+      border: none;
+      padding: 0.7rem 1.3rem;
+      border-radius: 7px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: var(--deep);
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+      .profile img {
+        margin: 0 0 1rem 0;
+      }
+      .gallery-section {
+        padding: 0;
+      }
+    }
+    @media (max-width: 500px) {
+      header {
+        font-size: 1.3rem;
+        padding: 1rem 0;
+      }
+      .gallery-section h2 {
+        font-size: 1.1rem;
+      }
+      .gallery-medium h3 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="ArtTheJim Logo" class="logo-img">
+    ArtTheJim Gallery
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <!-- Artist Profile -->
+  <section class="profile" id="profile">
+    <img src="profile.jpg" alt="Artist Profile Photo">
+    <div class="profile-content">
+      <h2>Jim Artsworth</h2>
+      <p>Welcome to my gallery! I’m Jim, a contemporary artist blending tradition and digital expression. My work explores the warmth and vibrancy of life through color and form. Browse my collections below, grouped by year and medium.</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section" id="gallery">
+    <!-- 2024 -->
+    <h2>2024</h2>
+    <div class="gallery-medium">
+      <h3>Oil Paintings</h3>
+      <div class="art-grid">
+        <div class="art-card">
+          <img src="art/2024/oil1.jpg" alt="Sunset Harmony">
+          <div class="art-title">Sunset Harmony</div>
+          <div class="art-price">$500</div>
+        </div>
+        <div class="art-card">
+          <img src="art/2024/oil2.jpg" alt="Golden Fields">
+          <div class="art-title">Golden Fields</div>
+          <div class="art-price">$420</div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-medium">
+      <h3>Digital Art</h3>
+      <div class="art-grid">
+        <div class="art-card">
+          <img src="art/2024/digital1.jpg" alt="Neon Dreams">
+          <div class="art-title">Neon Dreams</div>
+          <div class="art-price">$350</div>
+        </div>
+      </div>
+    </div>
+    <!-- 2023 -->
+    <h2>2023</h2>
+    <div class="gallery-medium">
+      <h3>Watercolor</h3>
+      <div class="art-grid">
+        <div class="art-card">
+          <img src="art/2023/watercolor1.jpg" alt="Blossom Path">
+          <div class="art-title">Blossom Path</div>
+          <div class="art-price">$210</div>
+        </div>
+        <div class="art-card">
+          <img src="art/2023/watercolor2.jpg" alt="Misty Morning">
+          <div class="art-title">Misty Morning</div>
+          <div class="art-price">$180</div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-medium">
+      <h3>Sculpture</h3>
+      <div class="art-grid">
+        <div class="art-card">
+          <img src="art/2023/sculpture1.jpg" alt="Clay Reverie">
+          <div class="art-title">Clay Reverie</div>
+          <div class="art-price">$600</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Contact & Social</h2>
+    <div class="social-links">
+      <a href="https://instagram.com/artthejim" target="_blank" title="Instagram"><span aria-label="Instagram">📷</span></a>
+      <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><span aria-label="Twitter">🐦</span></a>
+      <a href="mailto:jimgichuhi48@email.com" title="Email"><span aria-label="Email">✉️</span></a>
+      <!-- Add more as needed -->
+    </div>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Jim Mbugua" required>
+      <input type="email" name="email" placeholder="jimgichuhi48@gmail.com" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>
