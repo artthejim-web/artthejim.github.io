@@ -198,7 +198,6 @@
         <div class="art-price">Ksh.3,000</div>
       </div>
   </section>
-
   <!-- Contact Section -->
   <section class="contact-section" id="contact">
     <h2>Contact & Social</h2>
@@ -222,11 +221,9 @@ document.querySelectorAll('.art-img').forEach(img => {
         document.getElementById('modal-caption').innerText = this.alt;
     });
 });
-
 document.querySelector('.art-modal .close').onclick = function() {
     document.getElementById('art-modal').style.display = "none";
 };
-
 window.onclick = function(event) {
   var modal = document.getElementById('art-modal');
   if (event.target == modal) {
