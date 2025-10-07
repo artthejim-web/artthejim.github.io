@@ -207,17 +207,15 @@ nav a {
     font-size: 1rem;
   }
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-.art-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px;
-  box-sizing: border-box;
-  text-align: center;
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    max-height: 350px; /* or any value that fits your design */
+    object-fit: contain; /* show the whole image, do not crop */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background: #fff; /* optional: adds a background for images with transparency */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* optional: subtle shadow */
+    display: block;
+    margin: 0 auto;
 }
