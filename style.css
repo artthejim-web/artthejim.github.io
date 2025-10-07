@@ -219,3 +219,46 @@ nav a {
     display: block;
     margin: 0 auto;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+/* ...existing styles... */
+
+.gallery-grid img.art-img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Modal styles for lightbox */
+.art-modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  padding-top: 60px; 
+  left: 0; top: 0;
+  width: 100%; height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.9);
+}
+.art-modal .close {
+  position: absolute; top: 30px; right: 35px;
+  color: #fff; font-size: 40px; font-weight: bold;
+  cursor: pointer;
+}
+.art-modal .modal-content {
+  margin: auto; display: block;
+  max-width: 80vw; max-height: 80vh;
+  border-radius: 8px;
+}
+#modal-caption {
+  text-align: center; color: #ccc; padding: 10px 0;
+}
