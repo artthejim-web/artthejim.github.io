@@ -207,24 +207,8 @@ nav a {
     font-size: 1rem;
   }
 }
-.gallery-grid img {
-    width: 100%;
-    height: auto;
-    max-height: 350px; /* or any value that fits your design */
-    object-fit: contain; /* show the whole image, do not crop */
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    background: #fff; /* optional: adds a background for images with transparency */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* optional: subtle shadow */
-    display: block;
-    margin: 0 auto;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-/* ...existing styles... */
-
+/* Only one gallery-grid img selector is needed; removed redundancy */
+.gallery-grid img,
 .gallery-grid img.art-img {
   width: 100%;
   height: auto;
@@ -237,7 +221,9 @@ html {
   display: block;
   margin: 0 auto;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* Modal styles for lightbox */
 .art-modal {
   display: none; 
@@ -261,4 +247,10 @@ html {
 }
 #modal-caption {
   text-align: center; color: #ccc; padding: 10px 0;
+}
+/* Accessibility: Add focus outline for buttons and links */
+button:focus,
+a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
