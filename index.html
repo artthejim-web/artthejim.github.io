@@ -202,23 +202,34 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
-  <script>
-document.querySelectorAll('.art-img').forEach(img => {
-    img.addEventListener('click', function() {
-        document.getElementById('art-modal').style.display = 'block';
-        document.getElementById('modal-img').src = this.src;
-        document.getElementById('modal-caption').innerText = this.alt;
-    });
+     <!-- ...the rest of your HTML... -->
+
+<!-- Lightbox Modal for Gallery Images -->
+<div id="artModal" class="art-modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg" alt="">
+  <div id="modal-caption"></div>
+</div>
+
+<script>
+document.querySelectorAll('.gallery-grid img, .art-grid img').forEach(img => {
+  img.addEventListener('click', function () {
+    document.getElementById('artModal').style.display = 'block';
+    document.getElementById('modalImg').src = this.src;
+    document.getElementById('modal-caption').textContent = this.alt || '';
+  });
 });
+
 document.querySelector('.art-modal .close').onclick = function() {
-    document.getElementById('art-modal').style.display = "none";
+  document.getElementById('artModal').style.display = 'none';
 };
+
 window.onclick = function(event) {
-  var modal = document.getElementById('art-modal');
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target === document.getElementById('artModal')) {
+    document.getElementById('artModal').style.display = 'none';
   }
 };
 </script>
-</body>
-</html>
+     </body>
+</html> 
+<!-- ...end of file... -->
