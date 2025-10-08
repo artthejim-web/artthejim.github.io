@@ -23,18 +23,13 @@
     <img src="profile.jpg" alt="Artist Profile Photo">
     <div class="profile-content">
       <h2>Jim Mbugua</h2>
-      <p>Welcome to my gallery! I’m Jim, a contemporary artist blending tradition and modern expressionism. My work explores the warmth and vibrancy of life through charcoal, graphite, color and form. Browse my collections below, and explore my artistic journey!!.</p>
+      <p>Welcome to my gallery! I’m Jim, a contemporary artist blending tradition and modern expressionism. My work explores the warmth and vibrancy of life through charcoal, graphite, color and form. Browse my collections below, and explore my artistic journey!</p>
     </div>
   </section>
 
   <!-- Gallery -->
   <section class="gallery-section" id="gallery">
-    <!-- Modal for viewing art piece -->
-<div id="art-modal" class="art-modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modal-img">
-  <div id="modal-caption"></div>
-</div>
+
     <!-- 2024 -->
     <h2>2024</h2>
     <div class="art-grid">
@@ -58,30 +53,28 @@
         <div class="art-title">Cracked</div>
         <div class="art-price">Ksh.0.00</div>
       </div>
-     </div>
       <div class="art-card">
         <img src="art/2024/homelander.jpg" alt="homelander">
         <div class="art-title">Homelander</div>
         <div class="art-price">Ksh.0.00</div>
       </div>
-     </div>
       <div class="art-card">
         <img src="art/2024/michael.jpg" alt="michael">
         <div class="art-title">Michael</div>
         <div class="art-price">Ksh.0.00</div>
       </div>
-     </div>
       <div class="art-card">
         <img src="art/2024/oppenheimer.jpg" alt="oppenheimer">
         <div class="art-title">Oppenheimer</div>
         <div class="art-price">Ksh.0.00</div>
       </div>
-    </div>
       <div class="art-card">
         <img src="art/2024/shelby.jpg" alt="shelby">
         <div class="art-title">Shelby</div>
         <div class="art-price">Ksh.0.00</div>
       </div>
+    </div>
+
     <!-- Change Theme -->
     <h2>Change</h2>
     <div class="art-grid">
@@ -95,21 +88,23 @@
         <div class="art-title">CHANGE</div>
         <div class="art-price">Ksh.1,500</div>
       </div>
-    <div class="art-card">
+      <div class="art-card">
         <img src="art/change/LOVE.jpg" alt="LOVE">
         <div class="art-title">LOVE</div>
         <div class="art-price">Ksh.4,000</div>
       </div>
-    <div class="art-card">
+      <div class="art-card">
         <img src="art/change/PROGRESS.jpg" alt="PROGRESS">
         <div class="art-title">PROGRESS</div>
         <div class="art-price">Ksh.2,000</div>
       </div>
-    <div class="art-card">
+      <div class="art-card">
         <img src="art/change/SCOFIELD.jpg" alt="SCOFIELD">
         <div class="art-title">SCOFIELD</div>
         <div class="art-price">Ksh.2,000</div>
       </div>
+    </div>
+
     <!-- 2025 -->
     <h2>2025</h2>
     <div class="art-grid">
@@ -123,17 +118,18 @@
         <div class="art-title">EYE C</div>
         <div class="art-price">Ksh.2,000</div>
       </div>
-    </div>
-    <div class="art-card">
+      <div class="art-card">
         <img src="art/2025/SHE.jpg" alt="SHE">
         <div class="art-title">SHE</div>
         <div class="art-price">Ksh.3,000</div>
       </div>
-     <div class="art-card">
+      <div class="art-card">
         <img src="art/2025/YOU.jpg" alt="YOU">
         <div class="art-title">YOU</div>
         <div class="art-price">Ksh.1,000</div>
       </div>
+    </div>
+
     <!-- Commissions -->
     <h2>Commissions</h2>
     <div class="art-grid">
@@ -147,22 +143,23 @@
         <div class="art-title">COMMISSION</div>
         <div class="art-price">Ksh.3,000</div>
       </div>
-    </div>
-     <div class="art-card">
+      <div class="art-card">
         <img src="art/commissions/LOST LOVE.jpg" alt="LOST LOVE">
         <div class="art-title">LOST LOVE</div>
         <div class="art-price">Ksh.4,000</div>
       </div>
-   <div class="art-card">
+      <div class="art-card">
         <img src="art/commissions/SLIM.jpg" alt="SLIM">
         <div class="art-title">SLIM</div>
         <div class="art-price">Ksh.3,000</div>
-      </div> 
-    <div class="art-card">
+      </div>
+      <div class="art-card">
         <img src="art/commissions/SORROW.jpg" alt="SORROW">
         <div class="art-title">SORROW</div>
         <div class="art-price">Ksh.2,000</div>
-      </div> 
+      </div>
+    </div>
+
     <!-- Expressionism -->
     <h2>Expressionism</h2>
     <div class="art-grid">
@@ -186,7 +183,9 @@
         <div class="art-title">TURMOIL</div>
         <div class="art-price">Ksh.3,000</div>
       </div>
+    </div>
   </section>
+
   <!-- Contact Section -->
   <section class="contact-section" id="contact">
     <h2>Contact & Social</h2>
@@ -202,34 +201,48 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
-     <!-- ...the rest of your HTML... -->
 
-<!-- Lightbox Modal for Gallery Images -->
-<div id="artModal" class="art-modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImg" alt="">
-  <div id="modal-caption"></div>
-</div>
+  <!-- Lightbox Modal for Gallery Images -->
+  <div id="artModal" class="art-modal">
+    <span class="close" tabindex="0" role="button" aria-label="Close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="">
+    <div id="modal-caption"></div>
+  </div>
 
-<script>
-document.querySelectorAll('.gallery-grid img, .art-grid img').forEach(img => {
-  img.addEventListener('click', function () {
-    document.getElementById('artModal').style.display = 'block';
-    document.getElementById('modalImg').src = this.src;
-    document.getElementById('modal-caption').textContent = this.alt || '';
-  });
-});
+  <script>
+    // Gallery Modal Logic (Accessibility Improved)
+    document.querySelectorAll('.art-grid img').forEach(img => {
+      img.addEventListener('click', function () {
+        const modal = document.getElementById('artModal');
+        const modalImg = document.getElementById('modalImg');
+        const caption = document.getElementById('modal-caption');
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        modalImg.alt = this.alt || '';
+        caption.textContent = this.alt || '';
+        // Trap focus inside modal
+        document.querySelector('.art-modal .close').focus();
+      });
+    });
 
-document.querySelector('.art-modal .close').onclick = function() {
-  document.getElementById('artModal').style.display = 'none';
-};
+    // Close modal on click
+    document.querySelector('.art-modal .close').onclick = function() {
+      document.getElementById('artModal').style.display = 'none';
+    };
 
-window.onclick = function(event) {
-  if (event.target === document.getElementById('artModal')) {
-    document.getElementById('artModal').style.display = 'none';
-  }
-};
-</script>
-     </body>
-</html> 
-<!-- ...end of file... -->
+    // Close modal on outside click
+    window.onclick = function(event) {
+      if (event.target === document.getElementById('artModal')) {
+        document.getElementById('artModal').style.display = 'none';
+      }
+    };
+
+    // Accessibility: close modal with Escape key
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        document.getElementById('artModal').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
