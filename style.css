@@ -138,18 +138,42 @@ nav a {
   font-size: 1.3rem;
 }
 .social-links {
-  margin: 1rem 0;
+  display: flex;
+  gap: 1.5rem; /* Spacing between icons */
+  justify-content: center; /* Center the icons */
+  margin: 1.5rem 0; /* Margin above and below */
+  font-family: 'Montserrat', Arial, sans-serif; /* Ensure font consistency */
 }
+
 .social-links a {
   display: inline-block;
-  margin: 0 0.7rem;
-  color: #fff;
-  font-size: 1.7rem;
-  text-decoration: none;
-  transition: color 0.2s;
+  color: #fff; /* White icons to match contact-section background (--accent) */
+  font-size: 2rem; /* Icon size */
+  text-decoration: none; /* No underline */
+  transition: color 0.2s ease, transform 0.2s ease; /* Smooth hover effects */
+  line-height: 1; /* Prevent extra spacing */
 }
+
 .social-links a:hover {
-  color: var(--highlight);
+  color: var(--highlight); /* #ffbc80 for hover */
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Platform-specific colors */
+.social-links a[href*="instagram.com"] i {
+  color: #E1306C; /* Instagram brand color */
+}
+
+.social-links a[href*="mailto"] i {
+  color: #fff; /* White for email to match background */
+}
+
+.social-links a[href*="wa.me"] i {
+  color: #25D366; /* WhatsApp brand color */
+}
+
+.social-links a:hover i {
+  color: inherit; /* Inherit hover color from parent <a> */
 }
 .contact-form {
   margin-top: 1rem;
